@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fold Ethos
 
-## Getting Started
+A minimal JavaScript Next.js foundation using the App Router, Tailwind CSS,
+and ESLint. GSAP, @gsap/react, and Lenis are installed for future work.
 
-First, run the development server:
+## Development
+
+Use the Node LTS version pinned in `.nvmrc`:
 
 ```bash
+nvm install
+nvm use
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Validation and formatting
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+npm run format
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Prettier excludes AGENTS.md and the preserved brand assets to keep them unchanged.
+CI runs `npm ci`, lint, and build on every pull request.
 
-## Learn More
+## Static hosting
 
-To learn more about Next.js, take a look at the following resources:
+`npm run build` exports the site to `out/`. Deploy that directory to a static
+host. Image optimization is disabled. Preview the export with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+python3 -m http.server 3000 --directory out
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Files
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `AGENTS.md`: repository instructions; preserve its content.
+- `src/app/`: the minimal black page, layout, and styles.
+- `src/data/projects.json`: an empty project list.
+- `public/brand/`: all six image assets preserved from the previous project.
+- `src/lib/motion.js`: shared charter easing and timing constants (seconds).
+- `src/components/` and `src/hooks/`: empty folders reserved for future work.
+- `public/work/` and `public/motion/`: empty asset folders.
