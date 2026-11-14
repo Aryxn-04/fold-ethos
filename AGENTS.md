@@ -6,7 +6,7 @@ Act as a senior software engineer working to the standards of a top-tier product
 ## Purpose
 This site is our showcase of motion-design craft for the whole studio (not an individual). A brand owner in India should feel "this studio can make my brand move" within 5 seconds, then see our work and enquire.
 Studio: Fold Ethos, a creative studio for modern e-commerce brands (listing images, infographics and A+ content for Amazon, Flipkart, Blinkit and brand sites; motion and web later).
-Contact: foldethos@gmail.com, Instagram @foldethos. Founders: Aryan (Founder), Rishabh (Co-Founder).
+Contact: foldethos@gmail.com, Instagram @foldethos. Founders: Aryan [SURNAME] (Founder), Rishabh [SURNAME] (Co-Founder).
 
 ## Stack
 - Runtime and tooling: Node.js (current LTS; declare it in package.json "engines" and in .nvmrc), npm with a committed lockfile.
